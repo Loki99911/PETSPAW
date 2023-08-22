@@ -1,0 +1,66 @@
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  margin: 0;
+  /* font-family: 'Jost', sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+input {
+  padding: 0;
+  margin: 0;
+}
+
+ul,li {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+}
+
+:root{
+  --main-blue:#B4B7FF;
+  --main-green:#97EAB9;
+  --main-yellow:#FFD280;
+  --main-white:#ffffff;
+  --main-black:#1D1D1D;
+  --main-gray:#8C8C8C;
+  --border-opacity:rgba(255, 255, 255, 0.6);
+  --border-pink:#FBE0DC;
+  --aсcent-pink:#FF868E;  
+}
