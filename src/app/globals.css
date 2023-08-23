@@ -1,14 +1,16 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+@import "node_modules/modern-normalize/modern-normalize.css";
 
 body {
   margin: 0;
-  /* font-family: 'Jost', sans-serif; */
+  font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--main-black);
+  background-color: #e5e5e5;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -30,7 +32,8 @@ input {
   margin: 0;
 }
 
-ul,li {
+ul,
+li {
   list-style: none;
 }
 
@@ -45,22 +48,21 @@ p {
   margin: 0;
 }
 
-button{
+button {
   border: none;
   background-color: transparent;
   padding: 0;
   margin: 0;
-
 }
 
-:root{
-  --main-blue:#B4B7FF;
-  --main-green:#97EAB9;
-  --main-yellow:#FFD280;
-  --main-white:#ffffff;
-  --main-black:#1D1D1D;
-  --main-gray:#8C8C8C;
-  --border-opacity:rgba(255, 255, 255, 0.6);
-  --border-pink:#FBE0DC;
-  --aсcent-pink:#FF868E;  
+:root {
+  --main-blue: #b4b7ff;
+  --main-green: #97eab9;
+  --main-yellow: #ffd280;
+  --main-white: #ffffff;
+  --main-black: #1d1d1d;
+  --main-gray: #8c8c8c;
+  --border-opacity: rgba(255, 255, 255, 0.6);
+  --main-pink: #fbe0dc;
+  --aсcent-pink: #ff868e;
 }

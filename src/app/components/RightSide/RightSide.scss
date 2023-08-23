@@ -1,0 +1,35 @@
+.right__wrapper {
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    position: relative;
+    width: 775px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 65px;
+  }
+}
+
+.right__img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 775px;
+  height: 100%;
+  background-image: url("../../../../public/girl-and-pet.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.right__field {
+  width: 680px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--main-pink);
+  &.transparent{
+    background-color: transparent;
+  }
+}

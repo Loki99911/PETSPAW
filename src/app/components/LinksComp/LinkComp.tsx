@@ -1,49 +1,62 @@
 "use client";
+import "./LinkComp.scss";
+import { usePathname } from "next/navigation.js";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { LinkImage, LinkText, LinkWrapper } from "./LinkComp.styled.js";
-import { useEffect } from "react";
+import Image from "next/image";
 
 export const LinkComp = () => {
-  let activePage;
-  useEffect(() => {
-    activePage = window.location.pathname;
-    console.log(activePage);
-  }, []);
+  const activePage = usePathname();
 
   return (
     <>
-      <LinkWrapper>
-        <Link href={"/voting"}>
-          <LinkImage
+      <div className="LinkWrapper">
+        <Link
+          className={
+            activePage !== "/voting" ? "LinkStyled" : "LinkStyled active"
+          }
+          href={"/voting"}
+        >
+          <Image
+            className="LinkImage blue"
             src={"/vote-table.png"}
             alt="Vote table"
             width={130}
             height={190}
-            color="blue"
           />
-          <LinkText>VOTING</LinkText>
+          <p className="LinkText">VOTING</p>
         </Link>
-        <Link href={"/breeds"}>
-          <LinkImage
+        <Link
+          className={
+            activePage !== "/breeds" ? "LinkStyled" : "LinkStyled active"
+          }
+          href={"/breeds"}
+        >
+          <Image
+            className="LinkImage green"
             src={"/pet-breeds.png"}
             alt="cat image"
             width={130}
             height={190}
-            color="green"
           />
-          <LinkText>BREEDS</LinkText>
+          <p className="LinkText">BREEDS</p>
         </Link>
-        <Link href={"/gallery"}>
-          <LinkImage
+        <Link
+          className={
+            activePage !== "/gallery" ? "LinkStyled" : "LinkStyled active"
+          }
+          href={"/gallery"}
+        >
+          <Image
+            className="LinkImage yellow"
             src={"/images-search.png"}
             alt="hand with phone"
             width={130}
             height={190}
-            color="yellow"
           />
-          <LinkText>GALLERY</LinkText>
+          <p className="LinkText">GALLERY</p>
         </Link>
-      </LinkWrapper>
+      </div>
     </>
   );
 };
