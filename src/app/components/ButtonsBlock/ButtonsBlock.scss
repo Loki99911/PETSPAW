@@ -1,0 +1,63 @@
+.bts__wrapper {
+  display: inline-flex;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 4px solid var(--main-white);
+  border-radius: 20px;
+  overflow: hidden;
+  transform: translate(-50%,-50%);
+  background-color: var(--main-white);
+}
+
+.btn {
+  position: relative; /* Для позиционирования разделителя */
+  padding: 25px;
+  border: none;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &.green {
+    background-color: var(--main-green);
+    &:hover {
+      background-color: rgba(151, 234, 185, 0.3);
+      .btn--icon {
+        fill: var(--main-green);
+      }
+    }
+  }
+  &.red {
+    background-color: var(--aсcent-pink);
+    &:hover {
+      background-color: rgba(255, 134, 142, 0.3);
+      .btn--icon {
+        fill: var(--aсcent-pink);
+      }
+    }
+  }
+  &.yellow {
+    background-color: var(--main-yellow);
+    &:hover {
+      background-color: rgba(255, 210, 128, 0.3);
+      .btn--icon {
+        fill: var(--main-yellow);
+      }
+    }
+  }
+}
+
+.btn:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -4px;
+  height: 100%;
+  width: 4px;
+  background-color: var(--main-white);
+}
+
+.btn--icon {
+  fill: var(--main-white);
+}

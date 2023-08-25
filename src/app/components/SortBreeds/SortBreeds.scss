@@ -1,0 +1,35 @@
+.sort__wrapper {
+  flex-direction: column;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.sort__wrapper,
+.sort__wrapper--btns {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.sort__btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f8f8f7;
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid var(--main-pink);
+    & .sort__btn--icon {
+      fill: var(--aсcent-pink);
+    }
+  }
+}
+
+.sort__btn--icon {
+  fill: var(--main-gray);
+}

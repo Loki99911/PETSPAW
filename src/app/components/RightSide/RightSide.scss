@@ -1,14 +1,22 @@
 .right__wrapper {
-  display: none;
-
+  display: flex;
+  justify-content: center;
+  
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
   @media screen and (min-width: 1440px) {
-    display: block;
-    position: relative;
     width: 775px;
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
     padding-left: 65px;
+  }
+  &.unshown {
+    display: none;
+    @media screen and (min-width: 1440px) {
+      display: block;
+      position: relative;
+    }
   }
 }
 
@@ -29,7 +37,10 @@
   height: 100%;
   border-radius: 20px;
   background-color: var(--main-pink);
-  &.transparent{
+  &.transparent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     background-color: transparent;
   }
 }

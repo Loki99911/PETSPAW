@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="main__wrapper">
       <LeftSide />
-      <RightSide></RightSide>
+      <RightSide />
     </main>
   );
 }

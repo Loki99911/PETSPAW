@@ -1,0 +1,37 @@
+.modal__overlay {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 9;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e5e5e5;
+  padding: 100px 20px 20px;
+  @media screen and (min-width: 768px) {
+    padding: 110px;
+  }
+}
+.close__btn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: var(--main-white);
+  &:hover {
+    background-color: var(--aсcent-pink);
+    
+    .close__btn--icon {
+      fill: var(--main-white);
+    }
+  }
+}
+
+.close__btn--icon {
+  fill: var(--aсcent-pink);
+}

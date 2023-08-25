@@ -1,0 +1,40 @@
+.back__wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.back__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  padding: 10px;
+  border-radius: 10px;
+
+  background-color: var(--main-pink);
+
+  &:hover {
+    background-color: var(--aсcent-pink);
+    .back__btn--icon {
+      fill: var(--main-white);
+    }
+  }
+}
+
+.back__btn--icon {
+  fill: var(--aсcent-pink);
+}
+
+.back__current-page {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  padding: 5px 30px;
+  border-radius: 10px;
+  background-color: var(--aсcent-pink);
+  color: var(--main-white);
+}
