@@ -15,7 +15,7 @@
   background-color: var(--main-pink);
 
   &:hover {
-    background-color: var(--aсcent-pink);
+    background-color: var(--accent-pink);
     .back__btn--icon {
       fill: var(--main-white);
     }
@@ -23,7 +23,7 @@
 }
 
 .back__btn--icon {
-  fill: var(--aсcent-pink);
+  fill: var(--accent-pink);
 }
 
 .back__current-page {
@@ -35,6 +35,10 @@
 
   padding: 5px 30px;
   border-radius: 10px;
-  background-color: var(--aсcent-pink);
-  color: var(--main-white);
+  background-color: var(--main-pink);
+  color: var(--accent-pink);
+  &:last-of-type {
+    background-color: var(--accent-pink);
+    color: var(--main-white);
+  }
 }

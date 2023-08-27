@@ -5,13 +5,13 @@ import SelectComp, { OptionType } from "../SelectComp/SelectComp";
 import { useEffect, useMemo, useState } from "react";
 import { getBreeds } from "@/app/API/CatApi";
 
-export const SortBreeds = ({ breed, setBreed, limit, setLimit }) => {
+export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
   const [breedList, setBreedList] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await getBreeds();        
+        const data = await getBreeds();
         setBreedList(data);
       } catch (error) {}
     };
@@ -52,10 +52,10 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit }) => {
     setLimit(e.value);
   };
   const onChangeOrderAB = (e) => {
-    console.log(e.target.id);
+    setOrder("desc");
   };
   const onChangeOrderBA = (e) => {
-    console.log(e);
+    setOrder("asc");
   };
 
   return (

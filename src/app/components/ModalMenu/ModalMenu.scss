@@ -24,8 +24,8 @@
   border-radius: 20px;
   background-color: var(--main-white);
   &:hover {
-    background-color: var(--aсcent-pink);
-    
+    background-color: var(--accent-pink);
+
     .close__btn--icon {
       fill: var(--main-white);
     }
@@ -33,5 +33,5 @@
 }
 
 .close__btn--icon {
-  fill: var(--aсcent-pink);
+  fill: var(--accent-pink);
 }

@@ -5,11 +5,10 @@ import "./GoBackComp.scss";
 export const GoBackComp = () => {
   const activePage = usePathname();
   const router = useRouter();
-
+  const pageFlags = activePage.split("/").slice(1);
   const goBack = () => {
     router.back();
   };
-
 
   return (
     <div className="back__wrapper">
@@ -18,7 +17,9 @@ export const GoBackComp = () => {
           <use href="/symbol-defs.svg#icon-back-20"></use>
         </svg>
       </button>
-      <span className="back__current-page">{activePage.slice(1)}</span>
+      {pageFlags.map((flag) => (
+        <span key={flag} className="back__current-page">{flag}</span>
+      ))}
     </div>
   );
 };

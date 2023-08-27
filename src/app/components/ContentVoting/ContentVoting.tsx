@@ -31,7 +31,7 @@ export const ContentVoting = () => {
           <Image
             className="randomImg"
             src={catImg.url}
-            alt="Vote table"
+            alt="Vote img"
             width={640}
             height={360}
           />

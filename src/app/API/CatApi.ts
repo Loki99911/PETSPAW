@@ -12,17 +12,18 @@ export const getRandomCat = async () => {
   return data;
 };
 
-export const getSomeCats = async ({ breed, limit = 10 }) => {
-  console.log(breed, limit);
+export const getBreedCats = async ({ breed, limit = 10, order }) => {
   const string = breed
-    ? `/images/search?limit=${limit}&breed_ids=${breed}`
-    : `/images/search?limit=${limit}`;
+    ? `/breeds?limit=${limit}&breed_ids=${breed}&order=${order}`
+    : `/breeds?limit=${limit}&order=${order}`;
   const { data } = await axios.get(string);
   return data;
 };
 
-export const getCatById = async (image_id) => {
-  const { data } = await axios.get(`/images/${image_id}`);
+export const getCatsImgByBreed = async (breedId) => {
+  const { data } = await axios.get(
+    `/images/search?breed_ids=${breedId}&limit=5`
+  );
   return data;
 };
 

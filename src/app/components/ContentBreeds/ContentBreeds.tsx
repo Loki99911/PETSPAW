@@ -4,26 +4,25 @@ import "./ContentBreeds.scss";
 import { GoBackComp } from "../GoBackComp/GoBackComp";
 import { SortBreeds } from "../SortBreeds/SortBreeds";
 import { useEffect, useState } from "react";
-import { getSomeCats } from "@/app/API/CatApi";
-import Image from "next/image";
+import { getBreedCats } from "@/app/API/CatApi";
+import { ImageList } from "../ImageList/ImageList";
 
 export const ContentBreeds = () => {
   const [breed, setBreed] = useState(null);
   const [limit, setLimit] = useState(10);
-  const [order, setOrder] = useState(0);
+  const [order, setOrder] = useState("random");
   const [someCats, setSomeCats] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await getSomeCats({ breed, limit });
+        const data = await getBreedCats({ breed, limit, order });
         setSomeCats(data);
       } catch (error) {}
     };
     getData();
-  }, [breed, limit]);
-
-  console.log(someCats);
+  }, [breed, limit, order]);
+  console.log(order);
 
   return (
     <div className="breeds__page">
@@ -37,19 +36,7 @@ export const ContentBreeds = () => {
           setOrder={setOrder}
         />
       </div>
-      <ul className="cat-list">
-        {someCats.map((el) => (
-          <li key={el.id}>
-            <Image
-              src={el.url}
-              alt="cat"
-              className="cat-item__img"
-              width={100}
-              height={100}
-            />
-          </li>
-        ))}
-      </ul>
+      <ImageList catsList={someCats} />
     </div>
   );
 };

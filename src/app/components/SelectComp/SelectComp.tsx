@@ -27,9 +27,6 @@ const selectStyles = (width: number, bgcolor: string) => ({
       borderColor: "#ff868e",
     },
   }),
-  // valueContainer: () => ({
-  //   padding: "0",
-  // }),
   menuList: (base: any, state: any) => ({
     ...base,
     color: "#8C8C8C",
@@ -58,6 +55,10 @@ const selectStyles = (width: number, bgcolor: string) => ({
     },
   }),
   indicatorSeparator: (base: any, state: any) => ({ ...base, display: "none" }),
+  container: (base: any) => ({
+    ...base,
+    flex: 1,
+  }),
 });
 
 interface IProp {
@@ -66,7 +67,7 @@ interface IProp {
   options: OptionType[];
   placeholder?: string;
   isDisabled?: boolean;
-  defaulValue?: OptionType;
+  defaultValue?: OptionType;
   onChange: (value: SelectEventType) => void;
 }
 
@@ -76,7 +77,7 @@ export default function SelectComp({
   options,
   placeholder = "Not selected",
   isDisabled = false,
-  defaulValue,
+  defaultValue,
   onChange,
 }: IProp) {
   return (
@@ -85,7 +86,7 @@ export default function SelectComp({
       placeholder={placeholder}
       isDisabled={isDisabled}
       styles={selectStyles(width, bgcolor)}
-      defaultValue={defaulValue}
+      defaultValue={defaultValue}
       onChange={onChange}
     />
   );
