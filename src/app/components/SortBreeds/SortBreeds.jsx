@@ -1,7 +1,7 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import "./SortBreeds.scss";
-import SelectComp, { OptionType } from "../SelectComp/SelectComp";
+import SelectComp from "../SelectComp/SelectComp";
 import { useEffect, useMemo, useState } from "react";
 import { getBreeds } from "@/app/API/CatApi";
 
@@ -18,7 +18,7 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
     getData();
   }, []);
 
-  const optionsBreeds: OptionType[] = useMemo(
+  const optionsBreeds= useMemo(
     () =>
       breedList.map(({ name, id }: { name: string; id: string }) => ({
         label: name,
@@ -26,7 +26,7 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
       })),
     [breedList]
   );
-  const optionsLimit: OptionType[] = [
+  const optionsLimit= [
     {
       value: 5,
       label: "Limit: 5",
