@@ -68,7 +68,7 @@ interface IProp {
   placeholder?: string;
   isDisabled?: boolean;
   defaultValue?: OptionType;
-  onChange: (value: SelectEventType) => void;
+  onChange: (value: SelectEvent, TypenewValue: SingleValue<OptionType>, actionMeta: ActionMeta<OptionType>) => void;
 }
 
 export default function SelectComp({
