@@ -1,7 +1,7 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import "./SortGallery.scss";
-import SelectComp, { OptionType } from "../SelectComp/SelectComp";
+import SelectComp,from "../SelectComp/SelectComp";
 import { useEffect, useMemo, useState } from "react";
 import { getBreeds, getCatsImgForGalery } from "@/app/API/CatApi";
 
@@ -22,7 +22,7 @@ export const SortGallery = ({ setSomeCats }) => {
     getData();
   }, []);
 
-  const optionsOrder: OptionType[] = [
+  const optionsOrder= [
     {
       value: "Random",
       label: "Random",
@@ -36,7 +36,7 @@ export const SortGallery = ({ setSomeCats }) => {
       label: "Asc",
     },
   ];
-  const optionsType: OptionType[] = [
+  const optionsType= [
     {
       value: "all",
       label: "All",
@@ -51,16 +51,16 @@ export const SortGallery = ({ setSomeCats }) => {
     },
   ];
 
-  const optionsBreeds: OptionType[] = useMemo(
+  const optionsBreeds= useMemo(
     () =>
-      breedList.map(({ name, id }: { name: string; id: string }) => ({
+      breedList.map(({ name, id }) => ({
         label: name,
         value: id,
       })),
     [breedList]
   );
 
-  const optionsLimit: OptionType[] = [
+  const optionsLimit= [
     {
       value: 5,
       label: "5 items per page",
