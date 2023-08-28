@@ -11,7 +11,7 @@ The site is an adaptive application for viewing, adding, voting and favouriting 
  Нou can use this link: **[https://loki99911.github.io/PETSPAW/](https://loki99911.github.io/PETSPAW/)**
 
 #### If site opening correctly, you will see the following pages:
-![Main page]("public/MainPage.JPG")
+![Main page]("./public/MainPage.JPG")
 ***
 
 ## Technologies
