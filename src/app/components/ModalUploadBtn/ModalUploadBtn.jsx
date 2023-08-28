@@ -20,7 +20,7 @@ export default function ModalUploadBtn() {
         className="upload__btn"
       >
         <svg width="20" height="18" className="upload__btn--icon">
-          <use href="/symbol-defs.svg#icon-upload-16"></use>
+          <use href="./symbol-defs.svg#icon-upload-16"></use>
         </svg>
         upload
       </button>

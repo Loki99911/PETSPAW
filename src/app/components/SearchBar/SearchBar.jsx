@@ -13,7 +13,7 @@ export const SearchBar = () => {
     e.preventDefault();
     setBreed(e.target.value);
   };
-  const searchBreed = () => {};
+  
   const openMenu = () => {
     setModalOpen((prev) => !prev);
   };
@@ -22,7 +22,7 @@ export const SearchBar = () => {
       <div className="search__wrapper">
         <button type="button" onClick={openMenu} className="menu__btn">
           <svg width="30" height="18" className="menu__btn--icon">
-            <use href="/symbol-defs.svg#icon-menu"></use>
+            <use href="./symbol-defs.svg#icon-menu"></use>
           </svg>
         </button>
         <form className="search__form">
@@ -38,7 +38,7 @@ export const SearchBar = () => {
             className="search__btn"
           >
             <svg width="20" height="20" className="search__btn--icon">
-              <use href="/symbol-defs.svg#icon-search-20"></use>
+              <use href="./symbol-defs.svg#icon-search-20"></use>
             </svg>
           </Link>
         </form>
@@ -50,7 +50,7 @@ export const SearchBar = () => {
             href={"/likes"}
           >
             <svg width="30" height="30" className="search__link--icon">
-              <use href="/symbol-defs.svg#icon-like-color-20"></use>
+              <use href="./symbol-defs.svg#icon-like-color-20"></use>
             </svg>
           </Link>
           <Link
@@ -62,7 +62,7 @@ export const SearchBar = () => {
             href={"/favourites"}
           >
             <svg width="30" height="30" className="search__link--icon">
-              <use href="/symbol-defs.svg#icon-fav-20"></use>
+              <use href="./symbol-defs.svg#icon-fav-20"></use>
             </svg>
           </Link>
           <Link
@@ -74,7 +74,7 @@ export const SearchBar = () => {
             href={"/dislikes"}
           >
             <svg width="30" height="30" className="search__link--icon">
-              <use href="/symbol-defs.svg#icon-dislike-color-20"></use>
+              <use href="./symbol-defs.svg#icon-dislike-color-20"></use>
             </svg>
           </Link>
         </div>

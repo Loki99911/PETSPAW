@@ -1,5 +1,5 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+
 import "./SortBreeds.scss";
 import SelectComp from "../SelectComp/SelectComp";
 import { useEffect, useMemo, useState } from "react";
@@ -18,7 +18,7 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
     getData();
   }, []);
 
-  const optionsBreeds= useMemo(
+  const optionsBreeds = useMemo(
     () =>
       breedList.map(({ name, id }) => ({
         label: name,
@@ -26,7 +26,7 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
       })),
     [breedList]
   );
-  const optionsLimit= [
+  const optionsLimit = [
     {
       value: 5,
       label: "Limit: 5",
@@ -80,7 +80,7 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
           id="AB"
         >
           <svg width="19" height="22" className="sort__btn--icon">
-            <use href="/symbol-defs.svg#icon-sort-20"></use>
+            <use href="./symbol-defs.svg#icon-sort-20"></use>
           </svg>
         </button>
         <button
@@ -90,7 +90,7 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
           id="AB"
         >
           <svg width="19" height="22" className="sort__btn--icon">
-            <use href="/symbol-defs.svg#icon-soft-revert-20"></use>
+            <use href="./symbol-defs.svg#icon-soft-revert-20"></use>
           </svg>
         </button>
       </div>

@@ -22,7 +22,7 @@ export const SortGallery = ({ setSomeCats }) => {
     getData();
   }, []);
 
-  const optionsOrder= [
+  const optionsOrder = [
     {
       value: "Random",
       label: "Random",
@@ -36,7 +36,7 @@ export const SortGallery = ({ setSomeCats }) => {
       label: "Asc",
     },
   ];
-  const optionsType= [
+  const optionsType = [
     {
       value: "all",
       label: "All",
@@ -51,7 +51,7 @@ export const SortGallery = ({ setSomeCats }) => {
     },
   ];
 
-  const optionsBreeds= useMemo(
+  const optionsBreeds = useMemo(
     () =>
       breedList.map(({ name, id }) => ({
         label: name,
@@ -60,7 +60,7 @@ export const SortGallery = ({ setSomeCats }) => {
     [breedList]
   );
 
-  const optionsLimit= [
+  const optionsLimit = [
     {
       value: 5,
       label: "5 items per page",
@@ -156,7 +156,7 @@ export const SortGallery = ({ setSomeCats }) => {
             className="sort__btn--refresh"
           >
             <svg width="18" height="20" className="sort__btn--icon">
-              <use href="/symbol-defs.svg#icon-update-20"></use>
+              <use href="./symbol-defs.svg#icon-update-20"></use>
             </svg>
           </button>
         </div>
