@@ -72,8 +72,8 @@ export const ImageList = ({ catsList, currentFavourites, setFavoriteAction }) =>
                     <use
                       href={
                         inFavourite(el.id)
-                          ? "/symbol-defs.svg#icon-fav-color-20"
-                          : "/symbol-defs.svg#icon-fav-20"
+                          ? "./symbol-defs.svg#icon-fav-color-20"
+                          : "./symbol-defs.svg#icon-fav-20"
                       }
                     ></use>
                   </svg>

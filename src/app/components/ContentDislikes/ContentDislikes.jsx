@@ -23,7 +23,6 @@ export const ContentDislikes = () => {
     };
     getData();
   }, []);
-console.log("dilekes", someCats);
 
   return (
     <div className="gallery__page">

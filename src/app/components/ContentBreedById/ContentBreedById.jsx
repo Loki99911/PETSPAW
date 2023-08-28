@@ -45,7 +45,7 @@ export const ContentBreedById = ({ breedId }) => {
             <div key={index} className="image-thumb">
               <Image
                 className="randomImg"
-                src={info.url || "/upload-bg.png"}
+                src={info.url || "./upload-bg.png"}
                 alt="Vote table"
                 width={640}
                 height={360}

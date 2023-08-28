@@ -25,11 +25,11 @@ export const LogsList = ({ logList }) => {
   const iconType = (value) => {
     switch (value) {
       case 1:
-        return "/symbol-defs.svg#icon-like-color-20";
+        return "./symbol-defs.svg#icon-like-color-20";
       case -1:
-        return "/symbol-defs.svg#icon-dislike-color-20";
+        return "./symbol-defs.svg#icon-dislike-color-20";
       default:
-        return "/symbol-defs.svg#icon-fav-20";
+        return "./symbol-defs.svg#icon-fav-20";
     }
   };
   return (

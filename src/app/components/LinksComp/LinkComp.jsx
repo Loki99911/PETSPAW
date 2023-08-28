@@ -18,7 +18,7 @@ export const LinkComp = () => {
       >
         <Image
           className="LinkImage blue"
-          src={"/vote-table.png"}
+          src={"./vote-table.png"}
           alt="Vote table"
           width={130}
           height={190}
@@ -33,7 +33,7 @@ export const LinkComp = () => {
       >
         <Image
           className="LinkImage green"
-          src={"/pet-breeds.png"}
+          src={"./pet-breeds.png"}
           alt="cat image"
           width={130}
           height={190}
@@ -48,7 +48,7 @@ export const LinkComp = () => {
       >
         <Image
           className="LinkImage yellow"
-          src={"/images-search.png"}
+          src={"./images-search.png"}
           alt="hand with phone"
           width={130}
           height={190}

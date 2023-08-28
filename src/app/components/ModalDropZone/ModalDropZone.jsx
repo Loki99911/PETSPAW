@@ -2,8 +2,6 @@ import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import './ModalDropZone.scss';
 import Image from 'next/image';
-// import { postCatImage } from '@/app/API/api';
-// import Loader from '../Loader/Loader';
 
 export default function ModalDropZone() {
    const [files, setFiles] = useState([]);
@@ -49,7 +47,6 @@ export default function ModalDropZone() {
 
       setIsLoading(true);
       try {
-          // await postCatImage(formData);
          setFiles([]);
          setIsApproved(1);
       } catch (error) {
@@ -89,12 +86,6 @@ export default function ModalDropZone() {
                onClick={onClick}
             >
                <span>
-                  {/* // {isLoading && (
-                  //    <Loader
-                  //       width={16}
-                  //       height={16}
-                  //    />
-                  // )} */}
                   upload photo
                </span>
             </button>
@@ -102,7 +93,7 @@ export default function ModalDropZone() {
          {isApproved === 1 && (
             <p className="drop-zone__message">
                <svg width="20" height="18" className="cat-item__btn--icon">
-          <use href="/symbol-defs.svg#icon-fav-20"></use>
+          <use href="./symbol-defs.svg#icon-fav-20"></use>
         </svg>
                Thanks for the Upload - Cat found!
             </p>
@@ -111,7 +102,7 @@ export default function ModalDropZone() {
          {isApproved === -1 && (
             <p className="drop-zone__message">
                <svg width="20" height="18" className="cat-item__btn--icon">
-          <use href="/symbol-defs.svg#icon-fav-20"></use>
+          <use href="./symbol-defs.svg#icon-fav-20"></use>
         </svg>
                No Cat found - try a different one
             </p>

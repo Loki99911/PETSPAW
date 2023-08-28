@@ -29,7 +29,7 @@ export const ButtonsBlock = ({ setOnLike, favouriteId, setFavouriteId, imageID }
     <div className="bts__wrapper">
       <button className="btn green" onClick={onClickLike}>
         <svg width="30" height="30" className="btn--icon">
-          <use href="/symbol-defs.svg#icon-like-color-20"></use>
+          <use href="./symbol-defs.svg#icon-like-color-20"></use>
         </svg>
       </button>
       <button className="btn red" onClick={onClickFav}>
@@ -37,15 +37,15 @@ export const ButtonsBlock = ({ setOnLike, favouriteId, setFavouriteId, imageID }
           <use
             href={
               !favouriteId
-                ? "/symbol-defs.svg#icon-fav-20"
-                : "/symbol-defs.svg#icon-fav-color-20"
+                ? "./symbol-defs.svg#icon-fav-20"
+                : "./symbol-defs.svg#icon-fav-color-20"
             }
           ></use>
         </svg>
       </button>
       <button className="btn yellow" onClick={onClickDisklike}>
         <svg width="30" height="30" className="btn--icon">
-          <use href="/symbol-defs.svg#icon-dislike-color-20"></use>
+          <use href="./symbol-defs.svg#icon-dislike-color-20"></use>
         </svg>
       </button>
     </div>

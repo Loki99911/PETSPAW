@@ -11,7 +11,7 @@ export const LeftSide = () => {
     <div
       className={activePage === "/" ? "left__wrapper shown" : "left__wrapper"}
     >
-      <Image src={"/logo.png"} alt="logo" width={107} height={24}/>
+      <Image src={"./logo.png"} alt="logo" width={107} height={24}/>
       <Welcome />
       <LinkComp />
     </div>
