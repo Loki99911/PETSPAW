@@ -2,10 +2,8 @@
 
 
 import { GoBackComp } from "../GoBackComp/GoBackComp";
-import { SortBreeds } from "../SortBreeds/SortBreeds";
 import { useEffect, useState } from "react";
 import { getCatsImgByBreed } from "@/app/API/CatApi";
-import { ImageList } from "../ImageList/ImageList";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -55,15 +53,6 @@ export const ContentBreedById = ({ breedId }) => {
             </div>
           ))}
         </Slider>
-        {/* <div className="image-thumb">
-          <Image
-            className="randomImg"
-            src={breedInfo[0].url || "/upload-bg.png"}
-            alt="Vote table"
-            width={640}
-            height={360}
-          />
-        </div> */}
       </div>
       <div className="breed__info--wrapper">
         <h3 className="breed__info--title">{breedInfo[0].breeds[0].name}</h3>
