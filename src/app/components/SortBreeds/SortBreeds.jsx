@@ -20,7 +20,7 @@ export const SortBreeds = ({ breed, setBreed, limit, setLimit, setOrder }) => {
 
   const optionsBreeds= useMemo(
     () =>
-      breedList.map(({ name, id }: { name: string; id: string }) => ({
+      breedList.map(({ name, id }) => ({
         label: name,
         value: id,
       })),
