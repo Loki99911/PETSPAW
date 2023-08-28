@@ -1,7 +1,7 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+
 import "./SortGallery.scss";
-import SelectComp,from "../SelectComp/SelectComp";
+import SelectComp from "../SelectComp/SelectComp";
 import { useEffect, useMemo, useState } from "react";
 import { getBreeds, getCatsImgForGalery } from "@/app/API/CatApi";
 
