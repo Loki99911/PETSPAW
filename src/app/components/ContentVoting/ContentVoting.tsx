@@ -5,21 +5,39 @@ import { GoBackComp } from "../GoBackComp/GoBackComp";
 import Image from "next/image";
 import { ButtonsBlock } from "../ButtonsBlock/ButtonsBlock";
 import { useEffect, useState } from "react";
-import { getRandomCat } from "@/app/API/CatApi";
+import { getFavourites, getRandomCat, getVotes } from "@/app/API/CatApi";
+import { LogsList } from "../LogsList/LogsList";
 
 export const ContentVoting = () => {
   const [catImg, setCatImg] = useState(null);
+  const [onLike, setOnLike] = useState(false);
+  const [favouriteId, setFavouriteId] = useState("");
+  const [currentLogs, setCurrentLogs] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const data = await getRandomCat();
-        console.log(data);
         setCatImg(data[0]);
       } catch (error) {}
-    }
+    };
     getData();
-  }, []);
+  }, [onLike]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const dataFavourites = await getFavourites();
+        const dataVotes = await getVotes();
+        setCurrentLogs(
+          [...dataVotes, ...dataFavourites].sort(
+            (a, b) => new Date(b.created_at) - new Date(a.created_at)
+          )
+        );
+      } catch (error) {}
+    };
+    getData();
+  }, [onLike, favouriteId]);
 
   if (!catImg) return;
 
@@ -36,9 +54,14 @@ export const ContentVoting = () => {
             height={360}
           />
         </div>
-        <ButtonsBlock />
+        <ButtonsBlock
+          setOnLike={setOnLike}
+          favouriteId={favouriteId}
+          setFavouriteId={setFavouriteId}
+          imageID={catImg.id}
+        />
       </div>
-      <div>Voting actions</div>
+      <LogsList logList={currentLogs} />
     </div>
   );
 };

@@ -33,11 +33,14 @@ export const SearchBar = () => {
             onChange={handleInput}
             value={breed}
           />
-          <button type="submit" className="search__btn" onSubmit={searchBreed}>
+          <Link
+            href={{ pathname: "/search", query: { keyword: `${breed}` } }}
+            className="search__btn"
+          >
             <svg width="20" height="20" className="search__btn--icon">
               <use href="/symbol-defs.svg#icon-search-20"></use>
             </svg>
-          </button>
+          </Link>
         </form>
         <div className="links__wrapper">
           <Link
@@ -76,7 +79,7 @@ export const SearchBar = () => {
           </Link>
         </div>
       </div>
-      
+
       {modalOpen && <ModalMenu closeMenu={openMenu} />}
     </>
   );

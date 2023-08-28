@@ -1,22 +1,24 @@
 "use client";
 
-import "./ContentBreedById.scss";
+
 import { GoBackComp } from "../GoBackComp/GoBackComp";
 import { SortBreeds } from "../SortBreeds/SortBreeds";
 import { useEffect, useState } from "react";
 import { getCatsImgByBreed } from "@/app/API/CatApi";
 import { ImageList } from "../ImageList/ImageList";
 import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./ContentBreedById.scss";
 
 export const ContentBreedById = ({ breedId }) => {
-  console.log("breedId", breedId);
 
   const [breedInfo, setBreedInfo] = useState(null);
   useEffect(() => {
     const getData = async () => {
       try {
         const data = await getCatsImgByBreed(breedId);
-        console.log(data);
 
         setBreedInfo(data);
       } catch (error) {}
@@ -25,7 +27,14 @@ export const ContentBreedById = ({ breedId }) => {
   }, []);
 
   if (!breedInfo) return;
-  console.log("breedInfo", breedInfo);
+
+    const sliderSettings = {
+      dots: true, 
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
 
   return (
     <div className="breeds__page">
@@ -33,7 +42,20 @@ export const ContentBreedById = ({ breedId }) => {
         <GoBackComp />
       </div>
       <div className="image-wrapper">
-        <div className="image-thumb">
+        <Slider {...sliderSettings}>
+          {breedInfo.map((info, index) => (
+            <div key={index} className="image-thumb">
+              <Image
+                className="randomImg"
+                src={info.url || "/upload-bg.png"}
+                alt="Vote table"
+                width={640}
+                height={360}
+              />
+            </div>
+          ))}
+        </Slider>
+        {/* <div className="image-thumb">
           <Image
             className="randomImg"
             src={breedInfo[0].url || "/upload-bg.png"}
@@ -41,7 +63,7 @@ export const ContentBreedById = ({ breedId }) => {
             width={640}
             height={360}
           />
-        </div>
+        </div> */}
       </div>
       <div className="breed__info--wrapper">
         <h3 className="breed__info--title">{breedInfo[0].breeds[0].name}</h3>

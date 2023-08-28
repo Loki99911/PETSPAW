@@ -1,0 +1,35 @@
+.upload__btn {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  gap: 10px;
+  border-radius: 10px;
+
+  background-color: var(--main-pink);
+  color: var(--accent-pink);
+  fill: var(--accent-pink);
+
+  &:hover {
+    background-color: var(--accent-pink);
+    color: var(--main-white);
+    & .upload__btn--icon {
+      fill: var(--main-white);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    width: 143px;
+    margin-top: 0;
+    top: 20px;
+    right: 20px;
+  }
+}

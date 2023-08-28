@@ -22,7 +22,6 @@ export const ContentBreeds = () => {
     };
     getData();
   }, [breed, limit, order]);
-  console.log(order);
 
   return (
     <div className="breeds__page">

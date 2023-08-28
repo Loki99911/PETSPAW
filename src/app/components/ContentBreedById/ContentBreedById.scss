@@ -104,3 +104,42 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.slick-slider {
+    position: relative;
+  }
+
+.slick-dots {
+  position: absolute;
+  bottom: -27px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color:var(--main-white);
+  height: 30px;
+  width: 90px;
+  border-radius: 15px;
+  li {
+    width: 10px;
+    height: 10px;
+    margin: 0 2.5px;
+    button::before {
+      display: none;
+      margin: 0;
+    }
+    button {
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      border-radius: 50%;
+      background-color: var(--main-pink);
+      opacity: 1;
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: var(--accent-pink);
+      opacity: 1;
+    }
+  }
+}

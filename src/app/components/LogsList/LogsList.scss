@@ -1,0 +1,47 @@
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.log-item {
+  position: relative;
+  padding: 15px;
+  background-color: #f8f8f7;
+  border-radius: 10px;  
+}
+
+.log-item__time {
+  padding: 3px 10px;
+  background-color: var(--main-white);
+  border-radius: 5px;
+}
+.log-item__text {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 10px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+.log-item__text--accent {
+  font-weight: 500;
+}
+.log-item__text--icon {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 25px;
+  right: 20px;
+
+  &.red {
+    fill: var(--accent-pink);
+  }
+  &.green {
+    fill: var(--main-green);
+  }
+  &.yellow {
+    fill: var(--main-yellow);
+  }
+}

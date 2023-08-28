@@ -1,42 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoBackComp } from "../GoBackComp/GoBackComp";
 import { ImageList } from "../ImageList/ImageList";
 import { SortGallery } from "../SortGallery/SortGallery";
 import "./ContentGallery.scss";
+import ModalUploadBtn from "../ModalUploadBtn/ModalUploadBtn";
+import { getCatsImgForGalery, getFavourites } from "@/app/API/CatApi";
 
 export const ContentGallery = () => {
-  const [order, setOrder] = useState("Random");
-  const [type, setType] = useState("All");
-  const [breed, setBreed] = useState(null);
-  const [limit, setLimit] = useState(10);
   const [someCats, setSomeCats] = useState([]);
+  const [currentFavourites, setCurrentFavourites] = useState(null);
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const data = await getBreedCats({ breed, limit });
-  //       setSomeCats(data);
-  //     } catch (error) {}
-  //   };
-  //   getData();
-  // }, [breed, limit]);
+  useEffect(() => {    
+    const getData = async () => {
+      try {
+        const dataFavourites = await getFavourites();
+        setCurrentFavourites(dataFavourites);
+        const defaultCats = await getCatsImgForGalery({});    
+        setSomeCats(defaultCats);
+      } catch (error) {
+        
+      }
+    };
+    getData();
+  }, []);
 
   return (
     <div className="gallery__page">
       <GoBackComp />
-      <SortGallery
-        order={order}
-        setOrder={setOrder}
-        type={type}
-        setType={setType}
-        breed={breed}
-        setBreed={setBreed}
-        limit={limit}
-        setLimit={setLimit}
-      />
-      <ImageList catsList={someCats} />
+      <ModalUploadBtn />
+      <SortGallery setSomeCats={setSomeCats} />
+      <ImageList catsList={someCats} currentFavourites={currentFavourites} />
     </div>
   );
 };

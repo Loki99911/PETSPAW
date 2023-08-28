@@ -3,19 +3,14 @@ import { usePathname, useRouter } from "next/navigation";
 import "./SortGallery.scss";
 import SelectComp, { OptionType } from "../SelectComp/SelectComp";
 import { useEffect, useMemo, useState } from "react";
-import { getBreeds } from "@/app/API/CatApi";
+import { getBreeds, getCatsImgForGalery } from "@/app/API/CatApi";
 
-export const SortGallery = ({
-  order,
-  setOrder,
-  type,
-  setType,
-  breed,
-  setBreed,
-  limit,
-  setLimit,
-}) => {
+export const SortGallery = ({ setSomeCats }) => {
   const [breedList, setBreedList] = useState([]);
+  const [order, setOrder] = useState("Random");
+  const [type, setType] = useState("All");
+  const [breed, setBreed] = useState(null);
+  const [limit, setLimit] = useState(10);
 
   useEffect(() => {
     const getData = async () => {
@@ -26,6 +21,7 @@ export const SortGallery = ({
     };
     getData();
   }, []);
+
   const optionsOrder: OptionType[] = [
     {
       value: "Random",
@@ -42,15 +38,15 @@ export const SortGallery = ({
   ];
   const optionsType: OptionType[] = [
     {
-      value: "All",
+      value: "all",
       label: "All",
     },
     {
-      value: "Static",
+      value: "static",
       label: "Static",
     },
     {
-      value: "Animated",
+      value: "gif",
       label: "Animated",
     },
   ];
@@ -95,8 +91,17 @@ export const SortGallery = ({
   const onChangeLimit = (e) => {
     setLimit(e.value);
   };
-  const onChangeRefresh = (e) => {
+  const refresh = async (e) => {
     console.log("refresh");
+    try {
+      const data = await getCatsImgForGalery({
+        breed,
+        limit,
+        order,
+        type,
+      });
+      setSomeCats(data);
+    } catch (error) {}
   };
 
   return (
@@ -147,7 +152,7 @@ export const SortGallery = ({
           />
           <button
             type="button"
-            onClick={onChangeRefresh}
+            onClick={refresh}
             className="sort__btn--refresh"
           >
             <svg width="18" height="20" className="sort__btn--icon">
