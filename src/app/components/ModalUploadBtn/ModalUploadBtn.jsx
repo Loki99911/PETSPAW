@@ -15,10 +15,8 @@ export default function ModalUploadBtn() {
   return (
     <>
       <button
-        className="upload"
         onClick={onClickUpload}
         type="button"
-        // eslint-disable-next-line
         className="upload__btn"
       >
         <svg width="20" height="18" className="upload__btn--icon">

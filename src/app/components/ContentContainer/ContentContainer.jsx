@@ -1,4 +1,4 @@
-import { SearchBar } from "../SearchBar/SearchBar";
+import { SearchBar } from "../SearchBar/SearchBar.jsx";
 import "./ContentContainer.scss";
 
 export const ContentContainer = ({children}) => {
