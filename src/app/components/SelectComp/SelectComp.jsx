@@ -2,17 +2,8 @@
 import React from "react";
 import Select from "react-select";
 
-export type OptionType = {
-  label: string;
-  value: string | number;
-};
-
-export type SelectEventType = {
-  value: string;
-};
-
-const selectStyles = (width: number, bgcolor: string) => ({
-  control: (base: any, state: any) => ({
+const selectStyles = (width, bgcolor) => ({
+  control: (base, state) => ({
     ...base,
     width: "100%",
     minWidth: width + "px",
@@ -27,7 +18,7 @@ const selectStyles = (width: number, bgcolor: string) => ({
       borderColor: "#ff868e",
     },
   }),
-  menuList: (base: any, state: any) => ({
+  menuList: (base, state) => ({
     ...base,
     color: "#8C8C8C",
     borderRadius: "10px",
@@ -46,7 +37,7 @@ const selectStyles = (width: number, bgcolor: string) => ({
       borderColor: "#ff868e",
     },
   }),
-  option: (base: any, state: any) => ({
+  option: (base, state) => ({
     ...base,
     color: state.isActive ? "#8C8C8C" : "#8C8C8C",
     backgroundColor: "transparent",
@@ -54,22 +45,12 @@ const selectStyles = (width: number, bgcolor: string) => ({
       backgroundColor: "transparent",
     },
   }),
-  indicatorSeparator: (base: any, state: any) => ({ ...base, display: "none" }),
-  container: (base: any) => ({
+  indicatorSeparator: (base, state) => ({ ...base, display: "none" }),
+  container: (base) => ({
     ...base,
     flex: 1,
   }),
 });
-
-interface IProp {
-  width?: number;
-  bgcolor?: string;
-  options: OptionType[];
-  placeholder?: string;
-  isDisabled?: boolean;
-  defaultValue?: OptionType;
-  onChange: (value: SelectEvent, TypenewValue: SingleValue<OptionType>, actionMeta: ActionMeta<OptionType>) => void;
-}
 
 export default function SelectComp({
   width = 200,
@@ -79,7 +60,7 @@ export default function SelectComp({
   isDisabled = false,
   defaultValue,
   onChange,
-}: IProp) {
+}) {
   return (
     <Select
       options={options}
