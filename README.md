@@ -8,7 +8,7 @@ The site is an adaptive application for viewing, adding, voting and favouriting 
 ## How to use
 
 ### Use on-line
- Нou can use this link: **[https://loki99911.github.io/PET_Battleship/](https://loki99911.github.io/PET_Battleship/)**
+ Нou can use this link: **[https://loki99911.github.io/PETSPAW/](https://loki99911.github.io/PETSPAW/)**
 
 #### If site opening correctly, you will see the following pages:
 ![Main page](./MainPage.JPG)
