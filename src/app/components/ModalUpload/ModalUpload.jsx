@@ -28,7 +28,7 @@ const ModalUpload = forwardRef((_, ref) => {
       <div className="modal">
         <button onClick={onClickClose} className="close">
           <svg width="20" height="18" className="cat-item__btn--icon">
-            <use href="./symbol-defs.svg#icon-fav-20"></use>
+            <use href="./symbol-defs.svg#icon-close-20"></use>
           </svg>
         </button>
         <h2 className="modal__header">Upload a .jpg or .png Cat Image</h2>

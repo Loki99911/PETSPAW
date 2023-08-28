@@ -92,7 +92,7 @@ export const SortGallery = ({ setSomeCats }) => {
     setLimit(e.value);
   };
   const refresh = async (e) => {
-    console.log("refresh");
+    
     try {
       const data = await getCatsImgForGalery({
         breed,
