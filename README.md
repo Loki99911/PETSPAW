@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Battleship
 
-## Getting Started
+This is a repository for playing game "Sea Battle".Also for demonstrations the capabilities of Native JS and CSS.
+***
 
-First, run the development server:
+## How to use
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Use on-line
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To use the application online, you can use a direct link on GitHub:
+![https://loki99911.github.io/PET_Battleship/](./img/GHLink.JPG)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ Or faster you can use this link: **[https://loki99911.github.io/PET_Battleship/](https://loki99911.github.io/PET_Battleship/)**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Use localy
 
-## Learn More
+To use the application localy, follow next steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository to your computer: `git clone` *https://github.com/Loki99911/PET_Battleship*
+2. Navigate to the project directory: `cd UserCardFollowers`
+3. Install dependencies of project: input `npm install` in console.
+4. Start the development server: `npm start`
+5. It will open a new tab in the your browser: *http://localhost:3000*.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### If you have done everything correctly, you will see the following pages:
+![Main page](./img/MainPage.JPG)
+***
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies
 
-## Deploy on Vercel
+The project is built with Node.JS using SCSS for styling.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+***
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Rules
+
+1. To start the game, you need to drag your ships onto the field or use a random arrangement.
+2. Ships cannot stay close to each other.
+3. To make a shot, you need to click on the selected cell on the enemy field.
+4. If you hit the ship, then shoot again.
+5. Good luck!
+***
+
+## Developed by:
+_Junior Frontend Developer - Nikita Kresik_:
+**[GitHub](https://github.com/Loki99911)**,
+**[Linkedin](https://www.linkedin.com/feed/)**
+***

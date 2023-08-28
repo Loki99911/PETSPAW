@@ -1,6 +1,5 @@
 .search__wrapper {
   display: flex;
-  // flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
@@ -9,9 +8,6 @@
     flex-wrap: nowrap;
   }
 
-  @media screen and (min-width: 1440px) {
-    // flex-direction: row;
-  }
 }
 .search__form {
   position: relative;
