@@ -20,7 +20,6 @@ The project is built on Next.JS and React using SCSS for styling.
 axios - for Requests, slick-carousel - for sviper Imgs.
 
 ***
-
 ## Developed by:
 _Junior Frontend Developer - Nikita Kresik_:
 **[GitHub](https://github.com/Loki99911)**,
