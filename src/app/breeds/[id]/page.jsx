@@ -6,7 +6,6 @@ import { ContentBreedById } from "@/app/components/ContentBreedById/ContentBreed
 
 export default function BreedByID({ params }) {
   const { id } = params;
-
   return (
     <main className="main__wrapper">
       <LeftSide />
