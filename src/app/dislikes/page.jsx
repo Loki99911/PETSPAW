@@ -5,6 +5,7 @@ import { RightSide } from "../components/RightSide/RightSide";
 import "./../main__wrapper.scss";
 
 export default function Likes() {
+  
   return (
     <main className="main__wrapper">
       <LeftSide />
